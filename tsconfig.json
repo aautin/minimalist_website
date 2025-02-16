@@ -3,9 +3,9 @@
     "target": "es2016",
     "module": "commonjs",
 
-    "outDir": "src/js",
-    "rootDir": "src/ts"
+    "outDir": "obj",
+    "rootDir": "src"
   },
-  "include": ["src/ts/*.ts"],
+  "include": ["src/*.ts"],
   "exclude": null
 }
