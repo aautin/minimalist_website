@@ -7,11 +7,12 @@ function isPassword(username: string, password: string): boolean {
 }
 
 function login() {
-    const username = document.getElementById('loginUsername') as HTMLInputElement;
-    const password = document.getElementById('loginPassword') as HTMLInputElement;
+    const username = document.getElementById("loginUsername") as HTMLInputElement;
+    const password = document.getElementById("loginPassword") as HTMLInputElement;
 
     console.log("Inputs:", username.value, password.value);
-    if (!isUser(username.value) || !isUser(username.value)) {
+    if (!isUser(username.value)
+        || !isPassword(username.value, password.value)) {
         console.log("Invalid username or password");
     }
 
@@ -20,8 +21,8 @@ function login() {
 }
 
 function register() {
-    const username = document.getElementById('registerUsername') as HTMLInputElement;
-    const password = document.getElementById('registerPassword') as HTMLInputElement;
+    const username = document.getElementById("registerUsername") as HTMLInputElement;
+    const password = document.getElementById("registerPassword") as HTMLInputElement;
 
     console.log("Inputs:", username.value, password.value);
     if (isUser(username.value)) {

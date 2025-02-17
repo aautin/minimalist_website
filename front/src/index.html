@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Switcher</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
@@ -15,8 +14,10 @@
     </div>
 
     <div id="homePanel" class="panel active">
-        <h2>HOME</h2>
-        <p>This is the content of the home panel.</p>
+        <h2>Put your name and back-end will calculate its lenght:</h2>
+        <input id="name" placeholder="Name">
+        <button onclick="getLength()">Calculate</button>
+        <label id="nameLength" style="display: none;"></label>
     </div>
 
     <div id="loginPanel" class="panel">
@@ -31,7 +32,8 @@
       <button onclick="register()">REGISTER</button>
     </div>
 
-    <script src="obj/panel.js"></script>
-    <script src="obj/user.js"></script>
+    <script src="dist/length.js"></script>
+    <script src="dist/panel.js"></script>
+    <script src="dist/user.js"></script>
 </body>
 </html>
