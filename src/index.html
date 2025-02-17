@@ -9,18 +9,26 @@
 <body>
 
     <div class="buttonContainer">
-        <button id="btn1" class="btn active" onclick="switchPanel(1)">HOME</button>
-        <button id="btn2" class="btn" onclick="switchPanel(2)">LOGIN</button>
+        <button id="homeBtn" class="btn active" onclick="switchPanel('home')">HOME</button>
+        <button id="loginBtn" class="btn" onclick="switchPanel('login')">LOGIN</button>
+        <button id="registerBtn" class="btn" onclick="switchPanel('register')">REGISTER</button>
     </div>
 
-    <div id="panel1" class="panel active">
+    <div id="homePanel" class="panel active">
         <h2>HOME</h2>
-        <p>This is the content of Panel 1.</p>
+        <p>This is the content of the home panel.</p>
     </div>
 
-    <div id="panel2" class="panel">
-        <h2>LOGIN</h2>
-        <p>This is the content of Panel 2.</p>
+    <div id="loginPanel" class="panel">
+      <input id="username" placeholder="Username">
+      <input id="password" placeholder="Password">
+      <button onclick="login()">LOGIN</button>
+  </div>
+
+    <div id="registerPanel" class="panel">
+      <input id="username" placeholder="Username">
+      <input id="password" placeholder="Password">
+      <button onclick="register()">REGISTER</button>
     </div>
 
     <script src="obj/script.js"></script>
