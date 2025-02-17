@@ -1,14 +1,15 @@
-function printName(): void {
-    const name = (document.getElementById("name") as HTMLInputElement).value;
+function switchPanel(index: number) {
+    // Hide panels
+    document.querySelectorAll('.panel').forEach(panel => {
+        panel.classList.remove('active');
+    });
+    // Hide buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
 
-    nameDisplay.textContent = `Hello, ${name}!`;
-    nameDisplay.style.display = "flex";
-    document.getElementById("submitButton")!.style.display = "none";
-    document.getElementById("label")!.style.display = "none";
-    document.getElementById("name")!.style.display = "none";
+
+    // Show selected panel and btn
+    document.getElementById(`panel${index}`).classList.add('active');
+    document.getElementById(`btn${index}`).classList.add('active');
 }
-
-const button = document.getElementById("submitButton")!;
-button.addEventListener("click", printName);
-
-const nameDisplay = document.getElementById("nameDisplay")!;

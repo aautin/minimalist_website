@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Print Name Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Switcher</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-  <label id="label" for="name">Enter your nickname:</label>
-  <input type="text" id="name" placeholder="Your name">
-  <button id="submitButton">Submit</button>
 
-  <!-- Title below -->
-  <h2 id="nameDisplay" style="display: none;" style="display: flex;">Your name will appear here.</h2>
+    <div class="buttonContainer">
+        <button id="btn1" class="btn active" onclick="switchPanel(1)">HOME</button>
+        <button id="btn2" class="btn" onclick="switchPanel(2)">LOGIN</button>
+    </div>
 
-  <!-- Link to compiled script.js -->
-  <script src="obj/script.js"></script>
+    <div id="panel1" class="panel active">
+        <h2>HOME</h2>
+        <p>This is the content of Panel 1.</p>
+    </div>
+
+    <div id="panel2" class="panel">
+        <h2>LOGIN</h2>
+        <p>This is the content of Panel 2.</p>
+    </div>
+
+    <script src="obj/script.js"></script>
 </body>
 </html>
