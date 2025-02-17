@@ -11,20 +11,15 @@ function getLength() {
     return __awaiter(this, void 0, void 0, function* () {
         const nameLength = document.getElementById("nameLength");
         const name = document.getElementById("name");
-        let length;
-        const nameValue = name.value;
         try {
-            // Wait for the fetch request to complete and get the response
             const response = yield fetch("http://localhost:3000/name-length", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name: nameValue }) // Send the 'name' value
+                body: JSON.stringify({ name: name.value })
             });
-            // Parse the response as JSON
             const data = yield response.json();
-            length = data.length;
-            // Update the label with the name length
-            nameLength.textContent = `Name length: ${length}`;
+            console.log(data);
+            nameLength.textContent = `Name length: ${data.length}`;
             nameLength.style.display = "block";
         }
         catch (error) {
