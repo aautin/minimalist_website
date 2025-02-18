@@ -1,13 +1,12 @@
 {
   "name": "back",
-
   "dependencies": {
     "cors": "^2.8.5",
+    "dependencies": "^0.0.1",
     "express": "^4.21.2"
   },
-
   "scripts": {
-    "start" : "node server.js &",
-    "stop" : "pkill -f server.js"
+    "start": "node server.js &",
+    "stop": "pkill -f server.js"
   }
 }
