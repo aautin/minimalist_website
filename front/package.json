@@ -6,7 +6,8 @@
   },
   "scripts": {
     "tsc": "npx tsc --watch --preserveWatchOutput &",
-    "live-server": "node start-live-server.js &",
+    "live-server": "npx live-server --port=5500 --open=src &",
+    "start": "npm run live-server && npm run tsc",
     "stop": "pkill -f live-server && pkill -f tsc"
   }
 }
