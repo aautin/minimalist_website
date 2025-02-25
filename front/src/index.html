@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Check clients status</title>
+    <title>Connect to websocket</title>
 </head>
 <body>
 
-    <div id="login">
-        <input id="username" placeholder="Username">
-        <button id="loginBtn" onclick="login()">Log-in</button>
+    <div>
+        <button id="connectBtn" onclick="connect()">Connect</button>
+        <button id="disconnectBtn" onclick="disconnect()">Disconnect</button>
+    </div>
+    <div>
+        <input id="message" placeholder="Message">
+        <button id="sendBtn" onclick="send()">Send</button>
     </div>
 
-    <!-- <div id="search">
-        <input id="target" placeholder="Username">
-        <button id="searchBtn" onclick="search()">Search</button>
-        <label id="status"></label>
-    </div> -->
-
-    <script src="dist/script.js"></script>
+    <script src="../dist/script.js"></script>
 </body>
 </html>
